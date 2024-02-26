@@ -17,7 +17,7 @@ https://docs.github.com/en/repositories/creating-and-managing-repositories/cloni
 2. Navigate to the project directory:
 
 ```
-cd Quiz4
+cd Quiz6
 ```
 
 3. Create a Conda environment using the provided `environment.yml` file:
@@ -29,7 +29,7 @@ conda env create -f environment.yml
 4. Activate the Conda environment:
 
 ```
-conda activte Quiz4
+conda activte Quiz6
 ```
 
 ## Running the Project

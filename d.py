@@ -42,10 +42,10 @@ class LoguruLogger(Logger):
         logger.error(message)
 
 def main():
-    environment = "Quiz4"
+    environment = "Quiz6"
 
     # Dynamically configure logging behavior based on environment or user preferences
-    if environment == "Quiz4":
+    if environment == "Quiz6":
         logger = LoguruLogger()
 
     # Use the logger
