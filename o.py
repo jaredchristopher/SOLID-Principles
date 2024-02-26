@@ -1,6 +1,11 @@
 # Created by: Jared Christopher
 # File: o.py
 
+# This file is pretty straight forward. I created the get_area funciton
+# as an abstract method so that every sublcass of Shape must inherit that function.
+# I added the Triangle shape to show that I can add new shapes without issue and to further show
+# that OCP is maintained and not violated.
+
 from abc import ABC, abstractmethod
 import math
 

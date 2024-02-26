@@ -2,8 +2,8 @@
 # File: s.py
 
 # I created an order class because I wanted to be able to define what an
-# order should have. An order should have customer details. It must be validated, have a cost, and have
-# a confirmation email sent to the customer. Afterwards, it should update the inventory.
+# order should have. An order should have customer details. It must be validated. It must have a cost, and
+# a confirmation email must be sent to the customer after they pay for their order. Afterwards, it should update the inventory.
 class Order:
     def __init__(self, order_details, order_validator, order_cost, order_confirm, inventory_updater):
         self.order_details = order_details
@@ -24,14 +24,14 @@ class Order:
             return "Order validation failed. Please check your order details."
 
 # OrderDetails has the parameters cutomer_name, items, and shipping_address
-# which is deemed as the necessary information for the order
+# which is what I deemed as the necessary information for the order.
 class OrderDetails:
     def __init__(self, customer_name, items, shipping_address):
         self.customer_name = customer_name
         self.items = items
         self.shipping_address = shipping_address
 
-# OverValidator should checkt the order details and make sure that they are all satisfied (!null)
+# OverValidator should check the order details and make sure that they are all satisfied (!None)
 class OrderValidator:
     def __init__(self, order_details):
         self.order_details = order_details
@@ -43,6 +43,7 @@ class OrderValidator:
             return False
 
 # Calcualtes the cost of the order based on how many items are being purchased
+# In John Doe's, case there will be 3 items.
 class OrderCost:
     def __init__(self, order_details):
         self.order_details = order_details
@@ -96,7 +97,7 @@ def main():
     print("Confirmation email:", order_confirm.send_confirmation())
 
     inventory_updater = UpdateInventory(num_of_items)
-    print("Inventory update message:", inventory_updater.update_inventory())
+    print(inventory_updater.update_inventory())
 
     order = Order(order_details, order_validator, order_cost, order_confirm, inventory_updater)
     

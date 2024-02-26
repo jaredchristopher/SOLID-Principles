@@ -1,6 +1,11 @@
 # Created by: Jared Christopher
 # File: i.py
 
+# To demonstrate that ISP is maintained, I have separated each distinct person as either a
+# librarian, user, or guest. Each of these persons have different accessabilites to the
+# library, with the librarian having the most access. This ensures that each person utilizes
+# interfaces that only they specifically need and have access to.
+
 class Book:
     def __init__(self, title, author, genre):
         self.title = title
@@ -48,6 +53,8 @@ class BookBorrowing:
     def generate_borrowing_report(self):
         print("Generating borrowing report.")
 
+# Here I just establish that a Librarian, User, and Guest all have different accessabilites.
+# I implement everything they can do in main().
 class Librarian(BookSearch, BookBorrowing, BookCatalog):
     pass
 

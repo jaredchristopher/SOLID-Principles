@@ -36,34 +36,12 @@ class LoguruLogger(Logger):
     def error(self, message):
         logger.error(message)
 
-# Concrete implementation of logger using the logging module
-class LoggingLogger(Logger):
-    def debug(self, message):
-        # Implement logging using the logging module
-        pass
-    
-    def info(self, message):
-        # Implement logging using the logging module
-        pass
-    
-    def warning(self, message):
-        # Implement logging using the logging module
-        pass
-    
-    def error(self, message):
-        # Implement logging using the logging module
-        pass
-
-# Your application logic
 def main():
-    # Determine environment based on some condition or configuration
-    environment = "development"
+    environment = "Quiz4"
 
     # Dynamically configure logging behavior based on environment or user preferences
-    if environment == "development":
+    if environment == "Quiz4":
         logger = LoguruLogger()
-    else:
-        logger = LoggingLogger()
 
     # Use the logger
     logger.debug("This is a dubugging message")

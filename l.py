@@ -12,7 +12,7 @@ class Shape:
 
     # In order to not violate LSP, I am implementing a get_dimensions function
     # that will work as my replacement for the set_width and set_height funcitons
-    # that were previously in the Circle and Rectangle subclasses.
+    # that were previously in the Circle and Rectangle subclasses as stated in assignment.
     def set_dimensions(self, *args):
         raise NotImplementedError("Subclasses must implement set_dimensions()")
 
@@ -74,7 +74,7 @@ def main():
     print("Triangle:", tri.get_area())
     print("Polygon:", poly.get_area())
 
-    # Setting dimensions
+    # Setting new dimensions
     c.set_dimensions(4)
     rec.set_dimensions(6, 8)
     tri.set_dimensions(10, 12)
