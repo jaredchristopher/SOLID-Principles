@@ -56,13 +56,13 @@ class BookBorrowing:
 # Here I just establish that a Librarian, User, and Guest all have different accessabilites.
 # I implement everything they can do in main().
 class Librarian(BookSearch, BookBorrowing, BookCatalog):
-    pass
+    print("I am a librarian.")
 
 class User(BookSearch, BookBorrowing):
-    pass
+    print("I am a user.")
 
 class Guest(BookSearch):
-    pass
+    print("I am a guest.")
 
 def main():
     librarian = Librarian()

@@ -1,7 +1,7 @@
 # Create by: Jared Christopher
 # File: bonus.py
 
-# Below, I state how my program satisfies each of the SOLID Principles of Object-Oriented Class Design:
+# Below, I state how my program (bonus.py) satisfies each of the SOLID Principles of Object-Oriented Class Design:
 
 # Single Responsibility Principle (SRP):
 #     - Each class I created has a single responsibility:
@@ -26,7 +26,8 @@
 #     - This ensures that clients only depend on the interfaces they use, preventing unnecessary dependencies.
 
 # Dependency Inversion Principle (DIP):
-#     - Dependencies like DataStorage and Display are injected into the ActivityMonitor constructor for loose coupling and easier testing. This allows the ActivityMonitor class to depend on abstractions (interfaces) rather than concrete implementations, promoting flexibility and extensibility.
+#     - Dependencies like DataStorage and Display are injected into the ActivityMonitor constructor for loose coupling and easier testing.
+#     - I did this to allow the ActivityMonitor class to depend on interfaces rather than concrete implementations, promoting more flexibility and extensibility.
 
 
 from abc import ABC, abstractmethod
@@ -35,13 +36,13 @@ from abc import ABC, abstractmethod
 class IDataStorage(ABC):
     @abstractmethod
     def store_data(self, data):
-        pass
+        print(f"Stored: {data}")
 
 # Interface display
 class IDisplay(ABC):
     @abstractmethod
     def show_data(self, data):
-        pass
+        print(f"Showing: {data}")
 
 # Concrete implementation of data storage
 class DataStorage(IDataStorage):
@@ -72,7 +73,7 @@ class ActivityMonitor:
 class Activity(ABC):
     @abstractmethod
     def perform_activity(self):
-        pass
+        print("Activity is being performed.")
 
 # Concrete activity: Walking
 class Walking(Activity):
