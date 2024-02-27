@@ -3,7 +3,7 @@
 
 # I created the the class Logger to provide the abstract methods for the logging interface.
 # This maintains DIP by allowing my main() funciton to witch between the different logging
-# methods without needing any changes. Allowign my main() function to interact with the abstract
+# methods without needing any changes. Allowing my main() function to interact with the abstract
 # interface instead of LoguruLogger directly, it allows for more flexability.
 
 from abc import ABC, abstractmethod
@@ -46,13 +46,21 @@ def main():
 
     # Dynamically configure logging behavior based on environment or user preferences
     if environment == "Quiz6":
-        logger = LoguruLogger()
+        logger_loguru = LoguruLogger()
 
     # Use the logger
     logger.debug("This is a dubugging message")
     logger.info("This is an info message")
     logger.warning("This is a warning message")
     logger.error("This is an error message")
+
+    print("Now using the concrete method.")
+
+    # Use the LoguruLogger
+    logger.debug(logger_loguru)
+    logger.info(logger_loguru)
+    logger.warning(logger_loguru)
+    logger.error(logger_loguru)
 
 if __name__ == "__main__":
     main()
